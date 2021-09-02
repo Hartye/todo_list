@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>commenting</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/function/comment.css" />
+    <link rel="stylesheet" href="/style/function/commentButtons.css" />
+    <link rel="stylesheet" href="/style/function/moduleButtons.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/"><span>BACK</span></a>
+      </nav>
+    </header>
+    <form method="post">
+      <div class="comment-canvas">
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          placeholder="Description"
+        >
+<%= data.description %> </textarea
+        >
+        <br />
+        <textarea
+          name="comment"
+          id="comment"
+          cols="30"
+          rows="10"
+          placeholder="Your comment goes here"
+        >
+<%= data.comment %></textarea
+        >
+      </div>
+      <div class="comment-buttons">
+        <label for="confirm" class="sr-only">Confirm new task</label>
+        <button type="submit" id="confirm">Comment</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+/* module */
+.module {
+  display: none;
+}
+
+.module.active {
+  height: 100%;
+  width: 100%;
+  top: 0;
+
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.module-canvas {
+  width: min(60vw, 500px);
+  padding: 2rem .5rem 1.5rem;
+
+  background: #e2e0dd;
+  text-align: center;
+  border-radius: .25rem;
+}
+
+.module-canvas form {
+  display: block;
+}
+
+textarea {
+  width: 95%;
+  height: 10vh;
+  background: #ffffff;
+  padding: 2px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+
+  resize: none;
+  border: none;
+}
+
+textarea:focus {
+  outline: 1px solid #262A2A;
+}

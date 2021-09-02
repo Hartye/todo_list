@@ -1,0 +1,62 @@
+/* canvas */
+.canvas {
+  width: 100%;
+}
+
+.todo {
+  width: 80vw;
+  background: transparent;
+
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  padding: .5rem 1.5rem;
+  border: 1px #939097 solid;
+  border-radius: .25rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+form div {
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: .5rem;
+}
+
+.delete {
+  background: rgb(252, 96, 96);
+}
+
+.delete img {
+  width: 1rem;
+}
+
+form a {
+  text-align: center;
+}
+
+.check {
+  opacity: .5;
+  margin-bottom: -3px;
+  width: 1rem;
+}
+
+.checked {
+  opacity: 1;
+}
+
+.done {
+  text-decoration: line-through;
+}

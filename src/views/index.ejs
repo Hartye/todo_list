@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hartye" />
+    <meta name="description" content="Site de testes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/function/canvas.css" />
+    <link rel="stylesheet" href="/style/function/controls.css" />
+    <link rel="stylesheet" href="/style/function/nav.css" />
+    <link rel="stylesheet" href="/style/function/module.css" />
+    <link rel="stylesheet" href="/style/function/moduleButtons.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="https://github.com/Hartye" rel="external" target="__blank">
+            <li>Github</li>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/carlos-daniel-274a55219/"
+            rel="external"
+            target="__blank"
+          >
+            <li>LinkedIn</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="controller">
+        <button onclick="DOM.swap()">+ add</button>
+      </section>
+
+      <section class="canvas">
+        <% data.forEach(tasks => { %>
+        <div class="todo" id="<%= tasks.id %> ">
+          <form action="">
+            <div class="icons">
+              <a href="/delete/<%= tasks.id %> " class="delete"><img src="/images/delete.svg" alt="Delete"/></a>
+              <a href="/comment/<%= tasks.id %> "><span>+</span></a>
+            </div>
+            <div>
+              <span class="pending"> <%= tasks.description %> </span>
+            </div>
+          </form>
+        </div>
+        <% }) %>
+      </section>
+
+      <section class="module">
+        <div class="module-canvas">
+          <form action="" method="POST">
+            <div class="description-canvas">
+              <label for="description" class="sr-only">Describe new task</label>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                placeholder="Description"
+              ></textarea>
+            </div>
+            <div class="button-canvas">
+              <label for="confirm" class="sr-only">Confirm new task</label>
+              <button
+                type="submit"
+                id="confirm"
+                onclick="Form.submit(event)"
+                onclick="DOM.swap()"
+              >
+                Confirm
+              </button>
+
+              <label for="cancel" class="sr-only">Cancel new task</label>
+              <button type="reset" id="cancel" onclick="DOM.swap()">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copy">&copy; <span class="date"></span> Hartye</div>
+    </footer>
+    <script src="/script/script.js"></script>
+  </body>
+</html>
